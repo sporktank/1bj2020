@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/clock__johnj_sound_design_tension_horror_thumping_reveberant_clock_tick.ogg-99cd716e5bd12aad9f501632637e0e34.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/clock__johnj_sound_design_tension_horror_thumping_reveberant_clock_tick.ogg"
+dest_files=[ "res://.import/clock__johnj_sound_design_tension_horror_thumping_reveberant_clock_tick.ogg-99cd716e5bd12aad9f501632637e0e34.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

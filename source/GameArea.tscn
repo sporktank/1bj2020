@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://source/GameArea.gd" type="Script" id=1]
+[ext_resource path="res://assets/game/grid.png" type="Texture" id=3]
+
+[node name="game" type="Control"]
+margin_left = -200.0
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = 200.0
+rect_clip_content = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="center" type="Node2D" parent="."]
+position = Vector2( 200, 200 )
+
+[node name="polygon" type="Polygon2D" parent="center"]
+scale = Vector2( 20, 20 )
+
+[node name="grid" type="Sprite" parent="center"]
+texture = ExtResource( 3 )

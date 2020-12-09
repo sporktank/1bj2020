@@ -1,14 +1,22 @@
 extends Node
 
 
-const VERSION = "0.1.0"
+const VERSION = "0.2"
 
 
 var splash_shown = false
 
 
+func _input(event):  # TODO: Make this unhandled?
+	if event is InputEventKey and event.scancode == KEY_ESCAPE: get_tree().quit()
+	#if event is InputEventKey and event.is_pressed() and event.scancode == KEY_R: get_tree().reload_current_scene()
+	#if Input.is_action_just_pressed("fullscreen"):
+	#	OS.window_fullscreen = not OS.window_fullscreen
+	#	get_tree().set_input_as_handled()
+
+
 # Screenshot generation.
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("screenshot"):
 		
 		# Setup.

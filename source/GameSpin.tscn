@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://source/GameSpin.gd" type="Script" id=1]
+[ext_resource path="res://assets/game/arrowUp.png" type="Texture" id=2]
+
+[node name="game" type="Control"]
+margin_left = -200.0
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = 200.0
+rect_clip_content = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tween" type="Tween" parent="."]
+
+[node name="center" type="Node2D" parent="."]
+position = Vector2( 200, 200 )
+
+[node name="arrow0" type="Sprite" parent="center"]
+position = Vector2( -100, -100 )
+texture = ExtResource( 2 )
+
+[node name="arrow1" type="Sprite" parent="center"]
+position = Vector2( 100, -100 )
+texture = ExtResource( 2 )
+
+[node name="arrow2" type="Sprite" parent="center"]
+texture = ExtResource( 2 )
+
+[node name="arrow3" type="Sprite" parent="center"]
+position = Vector2( -100, 100 )
+texture = ExtResource( 2 )
+
+[node name="arrow4" type="Sprite" parent="center"]
+position = Vector2( 100, 100 )
+texture = ExtResource( 2 )

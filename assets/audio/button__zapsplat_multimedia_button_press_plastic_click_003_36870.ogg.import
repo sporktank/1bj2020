@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/button__zapsplat_multimedia_button_press_plastic_click_003_36870.ogg-2210b2c71d2c1d94d87a4f46fd2a8bdd.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/button__zapsplat_multimedia_button_press_plastic_click_003_36870.ogg"
+dest_files=[ "res://.import/button__zapsplat_multimedia_button_press_plastic_click_003_36870.ogg-2210b2c71d2c1d94d87a4f46fd2a8bdd.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

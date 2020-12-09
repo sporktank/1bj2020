@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://source/GameDots.gd" type="Script" id=2]
+[ext_resource path="res://assets/game/fightJ.png" type="Texture" id=3]
+
+[node name="game" type="Control"]
+margin_left = -200.0
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = 200.0
+rect_clip_content = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dot" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 3 )
+
+[node name="center" type="Node2D" parent="."]
+position = Vector2( 200, 200 )

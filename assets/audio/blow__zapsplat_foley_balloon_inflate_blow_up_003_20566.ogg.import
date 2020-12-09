@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/blow__zapsplat_foley_balloon_inflate_blow_up_003_20566.ogg-5165939a4115993cd6cededa4cdac840.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/blow__zapsplat_foley_balloon_inflate_blow_up_003_20566.ogg"
+dest_files=[ "res://.import/blow__zapsplat_foley_balloon_inflate_blow_up_003_20566.ogg-5165939a4115993cd6cededa4cdac840.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

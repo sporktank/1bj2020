@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pop__zapsplat_foley_balloon_pop_20568.ogg-b2ca924f437023f84233ea5596e8ab4c.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/pop__zapsplat_foley_balloon_pop_20568.ogg"
+dest_files=[ "res://.import/pop__zapsplat_foley_balloon_pop_20568.ogg-b2ca924f437023f84233ea5596e8ab4c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

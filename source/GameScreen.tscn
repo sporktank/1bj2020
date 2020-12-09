@@ -1,0 +1,399 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://source/pointer.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/NerkoOne-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://source/game.gd" type="Script" id=3]
+[ext_resource path="res://source/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://source/GameDots.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/game/glassPanel.png" type="Texture" id=6]
+[ext_resource path="res://assets/game/metalPanel.png" type="Texture" id=7]
+[ext_resource path="res://resources/text_font.tres" type="DynamicFont" id=8]
+[ext_resource path="res://source/Pointer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/game/glassPanel_extra.png" type="Texture" id=10]
+[ext_resource path="res://source/camera.gd" type="Script" id=11]
+[ext_resource path="res://assets/audio/clock__johnj_sound_design_tension_horror_thumping_reveberant_clock_tick.ogg" type="AudioStream" id=12]
+[ext_resource path="res://assets/audio/chipsCollide4.ogg" type="AudioStream" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="game" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.65
+anchor_right = 0.5
+anchor_bottom = 0.65
+margin_left = -300.0
+margin_top = -650.0
+margin_right = 300.0
+margin_bottom = 350.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="camera" type="Camera2D" parent="."]
+position = Vector2( 300, 500 )
+current = true
+script = ExtResource( 11 )
+
+[node name="game_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="opponents" type="Node2D" parent="."]
+position = Vector2( 300, 350 )
+
+[node name="0" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( -250, 600 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="1" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( -150, 600 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="2" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( -200, 550 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="3" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( -100, 550 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="4" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( -250, 450 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="5" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( -150, 450 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="6" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( -200, 400 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="7" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( -250, 300 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="8" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( -150, 300 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="9" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( -200, 250 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="10" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( 100, 550 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="11" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( 250, 600 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="12" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( 200, 250 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="13" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( 150, 300 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="14" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( 250, 300 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="15" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( 200, 400 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="16" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( 150, 450 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="17" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( 250, 450 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="18" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( 200, 550 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="19" parent="opponents" instance=ExtResource( 4 )]
+position = Vector2( 150, 600 )
+scale = Vector2( 0.3, 0.3 )
+is_opponent = true
+
+[node name="player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 300, 900 )
+_camera_path = NodePath("../camera")
+
+[node name="timer_bg" type="Sprite" parent="."]
+position = Vector2( 300, 280 )
+scale = Vector2( 3.7, 3.7 )
+z_index = 2
+texture = ExtResource( 10 )
+
+[node name="color_rect" type="ColorRect" parent="timer_bg"]
+show_behind_parent = true
+margin_left = -46.0
+margin_top = 39.0
+margin_right = 46.0
+margin_bottom = 46.0
+color = Color( 0.588235, 0.635294, 0.701961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="game_container" type="Node2D" parent="."]
+position = Vector2( 300, 225 )
+
+[node name="window" type="Sprite" parent="game_container"]
+scale = Vector2( 4, 4 )
+z_index = 1
+texture = ExtResource( 6 )
+
+[node name="cover" type="Sprite" parent="game_container"]
+scale = Vector2( 4, 4 )
+z_index = 2
+texture = ExtResource( 7 )
+
+[node name="game" parent="game_container" instance=ExtResource( 5 )]
+
+[node name="tween" type="Tween" parent="game_container"]
+
+[node name="answer" type="Node2D" parent="."]
+position = Vector2( 50, 50 )
+z_index = 2
+
+[node name="label" type="Label" parent="answer"]
+anchor_left = 0.083
+anchor_top = 0.45
+anchor_right = 0.917
+anchor_bottom = 0.5
+margin_right = 500.0
+margin_bottom = 350.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dummy" type="Node2D" parent="."]
+position = Vector2( 300, 388 )
+z_index = 3
+
+[node name="objective" type="Label" parent="dummy"]
+anchor_left = 0.083
+anchor_top = 0.45
+anchor_right = 0.917
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_right = 200.0
+margin_bottom = 106.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.917647, 0.941176, 0.847059, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="status" type="Label" parent="."]
+anchor_left = 0.083
+anchor_top = 0.45
+anchor_right = 0.917
+anchor_bottom = 0.5
+margin_left = 0.199997
+margin_top = -3.05176e-05
+margin_right = -0.200012
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 2 )
+text = "..."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="scoreboard" type="RichTextLabel" parent="."]
+anchor_left = 0.75
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -3.05176e-05
+margin_top = 5.0
+margin_right = -5.0
+custom_fonts/normal_font = ExtResource( 8 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tween" type="Tween" parent="scoreboard"]
+
+[node name="details" type="RichTextLabel" parent="."]
+anchor_right = 0.2
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -0.200005
+custom_fonts/normal_font = ExtResource( 8 )
+custom_colors/default_color = Color( 0.917647, 0.941176, 0.847059, 1 )
+bbcode_enabled = true
+bbcode_text = "SPORKTANK
+[u]1BJ-2020![/u]
+
+[u]ROOM[/u]
+EASY
+
+[u]GAME#[/u]
+132
+
+[u]PLAYERS[/u]
+6
+
+[u]WAITING[/u]
+2"
+text = "SPORKTANK
+1BJ-2020!
+
+ROOM
+EASY
+
+GAME#
+132
+
+PLAYERS
+6
+
+WAITING
+2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="canvas_layer" type="CanvasLayer" parent="."]
+
+[node name="gameover" type="Control" parent="canvas_layer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="ColorRect" parent="canvas_layer/gameover"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.505882 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="middle" type="Control" parent="canvas_layer/gameover"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pointer" parent="canvas_layer/gameover/middle" instance=ExtResource( 9 )]
+position = Vector2( -200, -200 )
+script = ExtResource( 1 )
+countdown_length = 3.0
+option_null = NodePath("../../../../canvas_layer/gameover/middle/dummy")
+option_1 = NodePath("../../../../canvas_layer/gameover/middle/play_again")
+option_2 = NodePath("../../../../canvas_layer/gameover/middle/return_to_menu")
+
+[node name="dummy" type="Label" parent="canvas_layer/gameover/middle"]
+margin_left = -150.0
+margin_top = -250.0
+margin_right = 150.0
+margin_bottom = -150.0
+custom_fonts/font = SubResource( 3 )
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="play_again" type="Label" parent="canvas_layer/gameover/middle"]
+margin_left = -150.0
+margin_top = -150.0
+margin_right = 150.0
+margin_bottom = -50.0
+custom_fonts/font = SubResource( 3 )
+text = "Play again"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="return_to_menu" type="Label" parent="canvas_layer/gameover/middle"]
+margin_left = -150.0
+margin_top = -50.0
+margin_right = 150.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 3 )
+text = "Return to menu"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="countdown" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="timer" type="Timer" parent="countdown"]
+one_shot = true
+
+[node name="countup" type="Node2D" parent="."]
+
+[node name="noise0" type="AudioStreamPlayer" parent="countup"]
+stream = ExtResource( 13 )
+volume_db = 10.4
+
+[node name="noise1" type="AudioStreamPlayer" parent="countup"]
+stream = ExtResource( 13 )
+volume_db = 10.4
+
+[node name="noise2" type="AudioStreamPlayer" parent="countup"]
+stream = ExtResource( 13 )
+volume_db = 10.4
+[connection signal="timeout" from="game_timer" to="." method="_on_game_timer_timeout"]
+[connection signal="option_selected" from="canvas_layer/gameover/middle/pointer" to="." method="_on_pointer_option_selected"]
+[connection signal="timeout" from="countdown/timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,101 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://source/player.gd" type="Script" id=1]
+[ext_resource path="res://assets/game/balloon_hacked.png" type="Texture" id=2]
+[ext_resource path="res://assets/game/avatar/normal_1F642_color.png" type="Texture" id=3]
+[ext_resource path="res://resources/heading_font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://assets/game/figurine.png" type="Texture" id=5]
+[ext_resource path="res://assets/fonts/SourceCodePro-Medium.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/audio/pop__zapsplat_foley_balloon_pop_20568.ogg" type="AudioStream" id=7]
+[ext_resource path="res://assets/audio/blow__zapsplat_foley_balloon_inflate_blow_up_003_20566.ogg" type="AudioStream" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+extra_spacing_top = 30
+font_data = ExtResource( 6 )
+
+[node name="player" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="avatar" type="Sprite" parent="."]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="avatar_bg" type="Sprite" parent="avatar"]
+modulate = Color( 0, 0, 0, 1 )
+show_behind_parent = true
+scale = Vector2( 1.115, 1.05 )
+texture = ExtResource( 5 )
+
+[node name="balloon" type="Sprite" parent="."]
+position = Vector2( 0, -100 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, -100 )
+
+[node name="avatar_old" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 2.00229, -38.6539 )
+scale = Vector2( 0.1, 0.1 )
+frames = SubResource( 1 )
+
+[node name="value" type="Label" parent="."]
+margin_left = -100.0
+margin_top = -250.0
+margin_right = 100.0
+margin_bottom = -100.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.121569, 0.121569, 0.160784, 1 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="."]
+margin_left = -100.0
+margin_right = 100.0
+margin_bottom = 107.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.917647, 0.941176, 0.847059, 1 )
+text = "Zoe"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="echo_start_timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="echo_repeat_timer" type="Timer" parent="."]
+wait_time = 0.05
+
+[node name="tween" type="Tween" parent="."]
+
+[node name="celebrate_tween" type="Tween" parent="."]
+
+[node name="pop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = 12.0
+
+[node name="blow" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+[connection signal="timeout" from="echo_start_timer" to="." method="_on_echo_start_timer_timeout"]
+[connection signal="timeout" from="echo_repeat_timer" to="." method="_on_echo_repeat_timer_timeout"]

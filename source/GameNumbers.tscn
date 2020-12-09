@@ -1,0 +1,123 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://source/GameNumbers.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/NerkoOne-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="game" type="Control"]
+margin_left = -200.0
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = 200.0
+rect_clip_content = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="center" type="Node2D" parent="."]
+position = Vector2( 200, 200 )
+
+[node name="number0" type="Label" parent="center"]
+margin_left = -200.0
+margin_top = -200.0
+margin_bottom = -100.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.917647, 0.941176, 0.847059, 1 )
+text = "4×5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="number1" type="Label" parent="center"]
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = -100.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.917647, 0.941176, 0.847059, 1 )
+text = "4×5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="number2" type="Label" parent="center"]
+margin_left = -200.0
+margin_top = -100.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.917647, 0.941176, 0.847059, 1 )
+text = "4×5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="number3" type="Label" parent="center"]
+margin_top = -100.0
+margin_right = 200.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.917647, 0.941176, 0.847059, 1 )
+text = "4×5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="number4" type="Label" parent="center"]
+margin_left = -200.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.917647, 0.941176, 0.847059, 1 )
+text = "4×5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="number5" type="Label" parent="center"]
+margin_right = 200.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.917647, 0.941176, 0.847059, 1 )
+text = "4×5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="number6" type="Label" parent="center"]
+margin_left = -200.0
+margin_top = 100.0
+margin_bottom = 200.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.917647, 0.941176, 0.847059, 1 )
+text = "4×5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="number7" type="Label" parent="center"]
+margin_top = 100.0
+margin_right = 200.0
+margin_bottom = 200.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.917647, 0.941176, 0.847059, 1 )
+text = "4×5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
